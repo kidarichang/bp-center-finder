@@ -22,7 +22,7 @@ const BPCard = ({ center }: BPCardProps) => {
           <p className="text-xs font-bold text-slate-500">대표번호</p>
           <a
             className="text-sm font-extrabold text-slate-900 hover:underline"
-            href={`tel:${center.phone1.replaceAll("-", "")}`}
+           href={`tel:${(center.phone1 ?? "").replaceAll("-", "")}`}
           >
             {center.phone1}
           </a>
@@ -33,7 +33,7 @@ const BPCard = ({ center }: BPCardProps) => {
             <p className="text-xs font-bold text-slate-500">추가번호</p>
             <a
               className="text-sm font-extrabold text-slate-900 hover:underline"
-              href={`tel:${center.phone2.replaceAll("-", "")}`}
+          href={`tel:${(center.phone2 ?? "").replaceAll("-", "")}`}
             >
               {center.phone2}
             </a>
